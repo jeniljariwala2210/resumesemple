@@ -1,0 +1,972 @@
+*{
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+    width:auto;
+    height: auto;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 25px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #5b5046;
+    margin: 15px 0 20px 0;
+}
+body{
+    width: 100%;
+    background-color: rgb(254, 251, 247);
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+button{
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    font-size: 25px;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    border: 1px solid white;
+}
+
+button:hover{
+    border: 1px solid red;
+    background-color: red;
+    color:white;
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(254, 251, 247);
+    box-shadow: 0px 5px 15px rgb(0, 0, 0,0.06);
+    z-index: 999;
+    position: sticky ;
+    top: 0;
+    left: 0;
+  
+}
+#header .logo{
+    height: 50px;
+    border: none;
+   
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#navbar li{
+    padding: 0 20px;
+    list-style: none;
+    color: black;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: rgb(255, 153, 127) ;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: #ff997f ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*------hero section----------*/
+
+#hero{
+    background-image: url("img cloths/hero1.png");
+    background-color: rgb(254, 251, 247);
+    height: 90vh;
+    width: 100%;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: right 70% ;  
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left:80px ;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+
+}
+#hero h2{
+    font-size: 80px;
+    padding-bottom: 20px;
+    
+}
+#hero h1{
+    color:  #ff997f;
+    font-size: 80px;
+
+}
+
+#hero button{
+    padding: 10px 30px;
+    color: white;
+    background-color: #ff997f;
+    font-size: 25px;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+
+#hero button:hover{
+    border: 1px solid #ff997f;
+    background-color: transparent;
+    color: #ff997f;
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap;
+    
+}
+
+#product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+
+.prod{
+    background-color: #fdf2f0;
+    border-radius: 25px;
+    border: 0.5px solid #ffdfd7;
+    position: relative;
+    margin-top: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+.prod:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.3);
+}
+.prod img{
+    height: 50vh;
+    margin: 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+}
+
+.des{
+    margin: 25px;
+}
+
+.des span{
+    color: #5e5e5e;
+    padding-bottom: 5px;
+}
+.des h4{
+    color: #ff997f;
+    padding-top: 10px;
+}
+.star{
+    color: rgb(255, 200, 0);
+    padding-top: 5px;
+}
+
+.cart{
+    position: absolute;
+    color: #ff997f;
+    background-color: #fff0ec;
+    border: 0.5px solid #ff997f;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: right;
+    bottom: 20px;
+    right: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.cart:hover{
+    position: absolute;
+    color: #fdf2f0;
+    background-color: #ff997f;
+}
+
+/* sale banner */
+
+#sale-banner{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("img cloths/sale.jpg");
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+
+#sale-banner h2{
+    color: white;
+    padding-top: 20px;
+}
+#sale-banner h1{
+    color: white;
+    padding: 20px;
+}
+
+#sale-banner span{
+    color: red;
+}
+
+#sale-banner button{
+    padding: 10px 30px;
+    color: red;
+    background-color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+
+#sale-banner button:hover{
+    border: 1px solid red;
+    background-color: red;
+    color:white;
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+#poster,#poster1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    color: white;
+    
+}
+.pos-content1{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img\ cloths/shopping bnr2.jpg");
+    height: 50vh;
+    width: 90vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.pos-content1:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img\ cloths/shopping bnr2.jpg");
+    cursor: pointer;
+}
+.pos-content2{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img\ cloths/shopping bnr3.jpg");
+    height: 50vh;
+    width: 90vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.pos-content2:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img\ cloths/shopping bnr3.jpg");
+}
+
+.pos-content1 h2{
+    color: white;
+    font-weight: 800;
+    padding: 5px 0;
+    font-size: 70px;
+}
+.pos-content1 h3{
+    color: white;
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+.pos-content2 h2{
+    color: white;
+    font-weight: 600;
+    padding: 5px 0;
+    font-size: 60px;
+}
+
+.pos-content2 h3{
+    color: white;
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+#poster button{
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    font-size: 25px;
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    border: 1px solid white;
+}
+
+
+#poster button:hover{
+    border: 1px solid red;
+    background-color: red;
+    color:white;
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.pos-content3{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img\ cloths/shopping bnr10.jpg");
+    height: 30vh;
+    width: 60vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.pos-content3:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img\ cloths/shopping bnr10.jpg");
+}
+
+.pos-content4{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img\ cloths/shopping bnr4.jpg");
+    height: 30vh;
+    width: 60vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.pos-content4:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img\ cloths/shopping bnr4.jpg");
+}
+
+.pos-content5{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("img\ cloths/shopping bnr8.jpg");
+    height: 30vh;
+    width: 60vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.pos-content5:hover{
+    box-shadow: 10px 10px 25px rgb(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img\ cloths/shopping bnr8.jpg");
+}
+
+.pos-content3  h2{
+    color: white;
+}
+.pos-content3 h3{
+    color: rgb(255, 238, 0);
+}
+
+.pos-content4 h2{
+   color: white;
+}
+.pos-content4 h3{
+    color: rgb(255, 238, 0);
+}
+.pos-content5  h2{
+    color: white;
+}
+.pos-content5 h3{
+    color: rgb(255, 238, 0);
+}
+
+#email-banner{
+    height: 30vh;
+    background-color: rgb(0, 121, 187);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+
+#email-banner h1{
+    color: white;
+}
+
+#email-banner span{
+    color: rgb(255, 0, 0);
+}
+#email-banner form{
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+#email-banner input{
+    text-indent: 10px;
+    font-size: 20px;
+    height:50px;
+    width: 70vh;
+    background:rgb(254, 251, 247);
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+}
+#email-banner button{
+    margin: 0;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 0;
+}
+
+#footer{
+    background-color: rgb(31, 0, 65) ;
+    align-items: center;
+    padding: 20px 80px;
+    margin-top: 25px;
+}
+
+footer{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(31, 0, 65) ;
+    color: white;
+}
+ 
+.followus .logo{
+    height: 50px;
+    border: none;     
+}
+.followus{
+    font-size:18px;
+    color: #c4c4c4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 40px;
+}
+.followus h2{
+    color: white;
+    font-size: 30px;
+}
+
+.followus h3{
+    color: rgb(196, 196, 196);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.li-connect a{
+    color: white;
+    font-size: 25px;
+    padding-right:10px ;
+}
+
+.li-connect a:hover{
+    color:red;
+}
+.about{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.about h2{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.about a{
+    text-decoration: none;
+    color:#c4c4c4;
+    line-height: 25px;
+    transition: 0.2s ease;
+}
+.about a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+
+.myaccount{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.myaccount h2{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.myaccount a{
+    text-decoration: none;
+    color:#c4c4c4;
+    line-height: 25px;
+    transition: 0.2s ease;
+}
+.myaccount a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.installapp{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.installapp h2{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.installapp h3{
+    color: white;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.installapp button{
+    margin: 15px 0;
+}
+
+.installapp button:hover{
+    color:black;
+    background-color: white;
+    border: none;
+}
+
+#footer h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+@media (max-width:999px){
+
+    #hero {
+        height: 60vh;
+        width: 100%;
+        background-size: 700px;
+        background-repeat: no-repeat;
+        background-position: right 70%;
+        
+    }
+    #hero h2 {
+        font-size: 60px;
+        padding-bottom: 20px;
+    }
+    #hero h1 {
+        color: #ff5d35;
+        font-size: 60px;
+        
+    }
+    .section-p1{
+        padding: 20px;
+    }
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    html{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pro-container {
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;  
+         
+    }
+
+    .prod img {
+        height: 30vh;
+       
+    }
+
+    .prod {
+        margin-right: 15px;
+        
+    }
+    #sale-banner h1 {
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #poster {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        color: white;
+    }
+    .pos-content1 {
+        height: 40vh;
+        width: 80vh;
+        margin-right: 10px;
+    }
+    .pos-content2 {
+        height: 40vh;
+        width: 80vh;
+    }
+    .pos-content1 h2 {
+        font-size: 50px;
+    }
+    .pos-content2 h2 {
+        font-size: 50px;
+    }
+
+    #poster1 {
+        align-items: center;
+        justify-content: center;
+        padding: 20px 30px;
+        color: white;
+        width: 100%;
+    
+    }
+    .pos-content3,.pos-content4,.pos-content5 {
+        height: 30vh;
+        width: 100%;
+       margin-bottom: 10px;
+    }
+    #email-banner {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 40px;
+        flex-direction: column;
+    }
+    #email-banner input {
+        font-size: 15px;
+        height: 40px;
+        width: 50vh;  
+    }
+    #email-banner button {
+        font-size: 17px;
+    }
+    #footer {
+        background-color: rgb(31, 0, 65);
+        padding: 0px 30px;
+        margin-top: 25px;
+    }
+    footer {
+        padding:0;
+        font-size: 20px;
+    }
+    .followus {
+        font-size: 15px;
+        color: #c4c4c4;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 30px;
+    }
+    .followus h2 {
+        color: white;
+        font-size: 20px;
+        
+    }
+    .li-connect a {
+        color: white;
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    .about h2 {
+        color: white;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .myaccount h2 {
+        font-size: 15px;
+    }
+    .about, .myaccount a {
+        text-decoration: none;
+        color: #c4c4c4;
+        line-height: 20px;
+        transition: 0.2s ease;
+        font-size: 15px;
+    }
+    .installapp {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:750px){
+
+    #hero {
+        height: 40vh;
+        width: 100%;
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: right 60%;
+        padding: 0 20px;
+        
+    }
+    #hero h2 {
+        font-size: 30px;
+        padding-bottom:15px;
+    }
+    #hero h1 {
+        color: #ff5d35;
+        font-size: 50px;
+        
+    }
+    .section-p1{
+        padding: 15px;
+    }
+    #header {
+       padding: 0 10px;
+       align-items: center;
+       justify-content: center;
+     }
+     #navbar li {
+        padding: 0 12px;
+        list-style: none;
+        color: black;
+        position: relative;
+    }
+     #navbar li a {
+        font-size: 10px;
+    }
+    .pro-container {
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;  
+         
+    }
+    .prod img {
+        height: 50vh;
+    }
+    #sale-banner {
+        height: 50vh;
+    }
+
+    #sale-banner h1 {
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    #poster{
+        display: block;
+    }
+    .pos-content1 ,.pos-content2{
+        height: 50vh;
+        width: 100%;
+        margin-bottom: 10px;
+        
+    }
+     
+    .pos-content1,.pos-content2 h2 {
+        font-size: 20px;
+    }
+
+    #poster1 {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 30px;
+        color: white;
+        width: 100%;
+    
+    }
+    .pos-content3,.pos-content4,.pos-content5 {
+        height: 40vh;
+        width: 100%;
+       margin-bottom: 10px;
+       padding-left: 5px;
+    }
+    #email-banner {
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 40px;
+        flex-direction: column;
+    }
+    #email-banner input {
+        font-size: 10px;
+        height: 20px;
+        width: 30vh;  
+        border-radius: 20px;
+    }
+    #email-banner button {
+        margin-top: 10px;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+    #footer {
+        background-color: rgb(31, 0, 65);
+        padding: 0px 30px;
+        margin-top: 25px;
+        height: 100vh;
+    }
+    footer {
+        padding:0;
+        font-size: 20px;
+        display: block;
+    }
+    .followus {
+        font-size: 15px;
+        color: #c4c4c4;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 30px;
+    }
+    .followus h2 {
+        color: white;
+        font-size: 20px;
+        
+    }
+    .li-connect a {
+        color: white;
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    .about h2 {
+        color: white;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .myaccount h2 {
+        font-size: 15px;
+    }
+    .about, .myaccount a {
+        text-decoration: none;
+        color: #c4c4c4;
+        line-height: 20px;
+        transition: 0.2s ease;
+        font-size: 15px;
+    }
+    .installapp {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    #footer h3 {
+        display: none;
+    }
+}

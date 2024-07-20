@@ -1,0 +1,34 @@
+*{
+    margin:auto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img1.jpg);
+    background-position: center;
+    backdrop-filter: 20%;
+
+}
+
+form{
+    align-items:center ;
+    border-radius: 20px;
+    border-color: black;
+
+}
+input{
+    
+    align-items:center ;
+    border-radius: 20px;
+    border-color: black;
+  
+}.REGISTRATION{
+    display:flex;
+    position: absolute;
+    border-radius: 20px;
+    border-color: black;
+   
+
+}

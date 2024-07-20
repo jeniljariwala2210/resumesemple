@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Orbitron;
+}
+h1{
+    color: white;
+    font-family:  monospace;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img1.jpg);
+}
+
+.calculator{
+    border: 0.5px solid rgb(163, 166, 255);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(255, 233, 144, 0.598);
+    background: transparent;
+    backdrop-filter:blur(5px);;
+    padding: 20px;
+}
+
+input{
+    background: transparent;
+    border: none;
+    height: 10vh;
+    border-radius: 20px 20px 0 0;
+    font-size: 25px;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    
+}
+
+input::placeholder{
+    color: white;
+}
+
+button{
+    background: transparent;
+    color: white;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    border: none;
+    border-radius: 30%;
+    border: 1px solid rgb(255, 230, 0,0.3);
+    box-shadow: 0 5px 20px rgba(138, 117, 0, 0.5);
+    cursor: pointer;
+    transition: 0.2s ease;
+    
+}
+
+#mode{
+    font-family: monospace;
+    color: blue;
+    transition: 0.2s ease;
+}
+#operator:hover{
+   color: rgb(255, 230, 0);
+
+   
+}
+#equal{ 
+    background-color: rgb(255, 204, 1);
+}
+
+button:hover{
+    color: black;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 20px rgba(255, 217, 0, 0.5);
+}
